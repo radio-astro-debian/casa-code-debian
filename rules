@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+#
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+override_dh_auto_configure:
+	# disable pgplot for now, since it is not included in the deb package
+	dh_auto_configure -- -DSKIP_PGPLOT=ON
+
+%:
+	dh $@ 
