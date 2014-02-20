@@ -2,16 +2,31 @@ Source: casa
 Section: science
 Priority: extra
 Maintainer: Gijs Molenaar <gijs@pythonic.nl>
-Build-Depends: debhelper (>= 8.0.0), cmake, libboost-program-options-dev, libboost-regex-dev, gfortran, libboost-filesystem-dev, libboost-thread-dev, libboost-serialization-dev, libcfitsio3-dev, pgplot5, wcslib-dev, libfftw3-dev, libblas-dev, liblapack-dev, libcasacore-dev, openjdk-6-jre-headless, libdbus-1-dev, libdbus-c++-dev, libxerces-c-dev, libreadline-dev, libxml2-dev
+Build-Depends: debhelper (>= 8.0.0), cmake, libboost-program-options-dev,
+ libboost-regex-dev, gfortran, libboost-filesystem-dev, libboost-thread-dev,
+ libboost-serialization-dev, libcfitsio3-dev, pgplot5, wcslib-dev,
+ libfftw3-dev, libblas-dev, liblapack-dev, libcasacore-dev,
+ openjdk-6-jre-headless, libdbus-1-dev, libdbus-c++-dev, libxerces-c-dev,
+ libreadline-dev, libxml2-dev
 Standards-Version: 3.9.2
 Homepage: http://casa.nrao.edu/
-#Vcs-Git: git://git.debian.org/collab-maint/casa.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/casa.git;a=summary
 
 Package: casa
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: supporting the data post-processing needs of the next generation of radio astronomical telescopes
+ CASA, the Common Astronomy Software Applications package, is being developed
+ with the primary goal of supporting the data post-processing needs of the next
+ generation of radio astronomical telescopes such as ALMA and VLA. The package
+ can process both interferometric and single dish data, and is developed by an
+ international consortium of scientists based at the National Radio Astronomical
+ Observatory (NRAO), the European Southern Observatory (ESO), the National
+ Astronomical Observatory of Japan (NAOJ), the CSIRO Australia Telescope National
+ Facility (CSIRO/ATNF), and the Netherlands Institute for Radio Astronomy
+ (ASTRON) under the guidance of NRAO.  The CASA infrastructure consists of a set
+ of C++ tools bundled together under an iPython interface as a set of data
+ reduction tasks. This structure provides flexibility to process the data via
+ task interface or as a python script. In addition to the data reduction tasks,
+ many post-processing tools are available for even more flexibility and special
+ purpose reduction needs. 
 
-           
