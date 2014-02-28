@@ -5,10 +5,10 @@ Maintainer: Gijs Molenaar <gijs@pythonic.nl>
 Build-Depends: debhelper (>= 8.0.0), cmake, libboost-program-options-dev,
  libboost-regex-dev, gfortran, libboost-filesystem-dev, libboost-thread-dev,
  libboost-serialization-dev, libcfitsio3-dev, pgplot5, wcslib-dev,
- libfftw3-dev, libblas-dev, liblapack-dev, libcasacore-dev,
- openjdk-6-jre-headless, libdbus-1-dev, libdbus-c++-dev, libxerces-c-dev,
+ libfftw3-dev, libblas-dev, liblapack-dev, libx11-dev, libqt4-dev,
+ openjdk-6-jre-headless, libdbus-1-dev, libdbus-c++-dev, libxerces-c2-dev,
  libreadline-dev, libxml2-dev, libxslt1-dev, aatm (>= 0.5), libsqlite3-dev,
- rpfits, libncurses5-dev, subversion
+ rpfits, libncurses5-dev, subversion, libcasacasacore-dev, libqwt5-qt4-dev
 Standards-Version: 3.9.2
 Homepage: http://casa.nrao.edu/
 

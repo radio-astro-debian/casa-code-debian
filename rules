@@ -7,6 +7,7 @@ export DH_VERBOSE=1
 override_dh_auto_configure:
 	# disable pgplot for now, since it is not included in the deb package
 	dh_auto_configure -- -DSKIP_PGPLOT=ON
+	sed -ri 's/pthread//g' obj-${DEB_BUILD_GNU_TYPE}/CMakeFiles/config_check.dir/build.make
 
 %:
-	dh $@ 
+	dh $@ --parallel

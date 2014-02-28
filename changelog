@@ -1,5 +1,5 @@
-casa (4.2.0-1) unstable; urgency=low
+casa (4.2.0-1precise1) precise; urgency=low
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * Initial release
 
  -- Gijs Molenaar <gijs@pythonic.nl>  Fri, 31 Jan 2014 13:21:57 +0200
