@@ -1,0 +1,24 @@
+Description: don't overwrite internal set compiler flags
+ Debian sets CFLAGS and CXXFLAGS, cmake will convert these to
+ CMAKE_CXX_FLAGS. There is a bug in the CMake build system that will
+ discard all internal set compile flags when these are set.
+
+--- casa-4.2.0.orig/CMakeLists.txt
++++ casa-4.2.0/CMakeLists.txt
+@@ -319,14 +319,8 @@ endif()
+ 
+ set( CMAKE_MODULE_LINKER_FLAGS ${CMAKE_SHARED_LINKER_FLAGS} )
+ 
+-if( NOT CMAKE_CXX_FLAGS )
+-  set( CMAKE_CXX_FLAGS "${DEFAULT_CXX_FLAGS} ${EXTRA_CXX_FLAGS}" )
+-endif()
+-
+-if( NOT CMAKE_C_FLAGS )
+-  set( CMAKE_C_FLAGS "${DEFAULT_C_FLAGS} ${EXTRA_C_FLAGS}" )
+-endif()
+-
++set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${DEFAULT_CXX_FLAGS} ${EXTRA_CXX_FLAGS}" )
++set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${DEFAULT_C_FLAGS} ${EXTRA_C_FLAGS}" )
+ 
+ if( NOT RE_CMAKE )
+     if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)

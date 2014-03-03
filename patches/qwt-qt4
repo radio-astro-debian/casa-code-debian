@@ -1,0 +1,13 @@
+Description: fix qwt lib name
+
+--- casa-4.2.0.orig/CMakeLists.txt
++++ casa-4.2.0/CMakeLists.txt
+@@ -905,7 +905,7 @@ casa_find( QWT
+     ${casa_packages}/qwt-5.2.0
+     ${casa_packages}/qwt-5.2.1-svn
+     ${casa_packages}/qwt-5.2.3-svn
+-  LIBS qwt
++  LIBS qwt-qt4
+   CPP_VERSION QWT_VERSION_STR
+   DEPENDS QT4 )
+ 

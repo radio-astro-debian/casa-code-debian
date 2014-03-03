@@ -1,23 +1,5 @@
 Description: fix build scripts
 
---- casa-4.2.0.orig/CMakeLists.txt
-+++ casa-4.2.0/CMakeLists.txt
-@@ -914,13 +914,13 @@ set( QT4_FOUND TRUE CACHE BOOL "Was QT4
- casa_find( QWT
-   VERSION 5.1.1
-   INCLUDES qwt_global.h
--  INCLUDES_SUFFIXES qwt qwt-qt4
-+  INCLUDES_SUFFIXES qwt-qt4
-   PREFIX_HINTS 
-     ${QWT_ROOT_DIR}
-     ${casa_packages}/qwt-5.2.0
-     ${casa_packages}/qwt-5.2.1-svn
-     ${casa_packages}/qwt-5.2.3-svn
--  LIBS qwt
-+  LIBS qwt-qt4
-   CPP_VERSION QWT_VERSION_STR
-   DEPENDS QT4 )
- 
 --- casa-4.2.0.orig/install/casadef.cmake
 +++ casa-4.2.0/install/casadef.cmake
 @@ -83,13 +83,15 @@ set( ENV{LC_TIME} ${_lc_time_old} )

@@ -1,1 +1,4 @@
 buildscripts
+compilerflags
+dbuslib
+qwt-qt4

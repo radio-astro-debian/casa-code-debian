@@ -1,2 +1,6 @@
-casa.debhelper.log
-
+*.debhelper.log
+*.postinst.debhelper
+*.postrm.debhelper
+*.substvars
+casa/
+files

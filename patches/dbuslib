@@ -1,0 +1,29 @@
+Description: fix finding of dbus libs
+
+--- casa-4.2.0.orig/CMakeLists.txt
++++ casa-4.2.0/CMakeLists.txt
+@@ -784,19 +790,10 @@ if ( ${dbusxx} STREQUAL dbus-c++ )
+     set( dbus_depends DBUSXX_ARCH )
+   endif()
+ 
+-  casa_find( DBUSXX
+-    INCLUDES dbus/dbus.h
+-             dbus-c++/dbus.h
+-    INCLUDES_SUFFIXES dbus-1.0 dbus-c++-1
+-    PREFIX_HINTS ${DBUS_ROOT_DIR} ${dbus_prefix}
+-    LIBS dbus-c++-1
+-    PROGRAMS dbusxx-xml2cpp
+-    DEPENDS ${dbus_depends}
+-    IGNORE /usr/lib64/casapy
+-  )
+-  set( dbus-xml-2-cxx ${DBUSXX_dbusxx-xml2cpp_EXECUTABLE} )
+-  set( DBUS_INCLUDE_DIRS ${DBUSXX_INCLUDE_DIRS} )
+-  set( DBUS_LIBRARIES ${DBUSXX_LIBRARIES} )
++  include(FindPkgConfig)
++  pkg_search_module(DBUS REQUIRED dbus-c++-1)
++  find_program(dbus-xml-2-cxx NAMES dbusxx-xml2cpp)
++  
+ else( )
+   casa_find( DBUSPP_ARCH
+     INCLUDES dbus/dbus-arch-deps.h
+
