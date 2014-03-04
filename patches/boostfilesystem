@@ -1,0 +1,33 @@
+Description: force boost filesystem 2
+
+--- casa-4.2.0.orig/alma/apps/asdm2MS/parasdm2MS.cc    (revision 28690)
++++ casa-4.2.0/alma/apps/asdm2MS/parasdm2MS.cc    (working copy)
+@@ -6,6 +6,7 @@
+//  #define omp_get_thread_num() 0
+//#endif
+
++#define BOOST_FILESYSTEM_VERSION 2
+#define DDPRIORITY 1
+#include <algorithm>
+#include <assert.h>
+--- casa-4.2.0.orig/alma/apps/asdm2MS/asdm2MS.cc   (revision 28690)
++++ casa-4.2.0/alma/apps/asdm2MS/asdm2MS.cc   (working copy)
+@@ -6,6 +6,7 @@
+//  #define omp_get_thread_num() 0
+//#endif
+
++#define BOOST_FILESYSTEM_VERSION 2
+#define DDPRIORITY 1
+#include <algorithm>
+#include <assert.h>
+--- casa-4.2.0.orig/alma/ASDM/Misc.cc  (revision 28690)
++++ casa-4.2.0/alma/ASDM/Misc.cc  (working copy)
+@@ -25,6 +25,8 @@
+ * File Misc.cpp
+  */
+
+  +#define BOOST_FILESYSTEM_VERSION 2
+  +
+  #include <Misc.h>
+
+  #include <sys/stat.h>
