@@ -2,4 +2,6 @@ buildscripts
 compilerflags
 dbuslib
 qwt-qt4
-dont-install-during-config
+noinstallduringconfig
+noinstallduringbuild
+disabledbussession

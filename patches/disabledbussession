@@ -1,0 +1,19 @@
+Description: dont install file to wrong location at wrong moment
+
+--- casa-4.2.0.orig/casadbus/CMakeLists.txt
++++ casa-4.2.0/casadbus/CMakeLists.txt
+@@ -26,10 +26,10 @@ casa_add_dbus_proxy( viewer/ViewerProxy.
+ ###
+ ### who know what is the right way to do this with C-MINUS-MAKE...
+ ###
+-add_custom_target(install-dbus-session ALL
+-    COMMAND mkdir -p ${CMAKE_INSTALL_PREFIX}/../etc/dbus/session.d
+-    COMMAND cp -f ${CMAKE_CURRENT_SOURCE_DIR}/etc/casa.conf ${CMAKE_INSTALL_PREFIX}/../etc/dbus
+-)
++#add_custom_target(install-dbus-session ALL
++#    COMMAND mkdir -p ${CMAKE_INSTALL_PREFIX}/../etc/dbus/session.d
++#    COMMAND cp -f ${CMAKE_CURRENT_SOURCE_DIR}/etc/casa.conf ${CMAKE_INSTALL_PREFIX}/../etc/dbus
++#)
+ 
+ if (INTERACTIVE_ITERATION)
+    casa_add_dbus_proxy( interfaces/SynthImager.proxy.h xml/SynthImager.interface.xml )

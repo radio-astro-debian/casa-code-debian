@@ -1,3 +1,9 @@
+casa (4.2.0-5precise1) precise; urgency=low
+
+  * more don't install during config and build
+
+ -- Gijs Molenaar <gijs@pythonic.nl>  Tue, 04 Mar 2014 12:50:19 +0200
+
 casa (4.2.0-4precise1) precise; urgency=low
 
   * more don't install during config
