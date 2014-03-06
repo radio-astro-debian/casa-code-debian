@@ -1,3 +1,9 @@
+casa (4.2.0-6precise1) precise; urgency=low
+
+  * added missing libcasacasacore1 dep
+
+ -- Gijs Molenaar <gijs@pythonic.nl>  Tue, 04 Mar 2014 16:37:56 +0200
+
 casa (4.2.0-5precise1) precise; urgency=low
 
   * more don't install during config and build
