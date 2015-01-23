@@ -5,7 +5,7 @@ qwt-qt4
 noinstallduringconfig
 noinstallduringbuild
 disabledbussession
-missingheader
 virtual_createFTmachine
 disable_broken_stuff
 missing_header
+missing_header2

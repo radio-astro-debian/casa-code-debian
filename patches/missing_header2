@@ -1,0 +1,13 @@
+Description: missing header
+
+--- casa-code-4.2.orig/nrao/VLA/VLADiskInput.cc
++++ casa-code-4.2/nrao/VLA/VLADiskInput.cc
+@@ -25,6 +25,8 @@
+ //#
+ //# $Id: VLADiskInput.cc,v 19.2.20.3 2006/10/09 20:08:34 wyoung Exp $
+ 
++#include <unistd.h>
++
+ #include <nrao/VLA/VLADiskInput.h>
+ #include <nrao/VLA/nreal.h>
+ #include <casa/Utilities/Assert.h>
