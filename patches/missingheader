@@ -1,0 +1,33 @@
+Description: <short summary of the patch>
+
+--- casa-code-4.2.orig/nrao/VLA/VLADiskInput.cc
++++ casa-code-4.2/nrao/VLA/VLADiskInput.cc
+@@ -25,6 +25,8 @@
+ //#
+ //# $Id: VLADiskInput.cc,v 19.2.20.3 2006/10/09 20:08:34 wyoung Exp $
+ 
++#include <unistd.h>
++
+ #include <nrao/VLA/VLADiskInput.h>
+ #include <nrao/VLA/nreal.h>
+ #include <casa/Utilities/Assert.h>
+@@ -36,6 +38,7 @@
+ #include <arpa/inet.h>
+ #include <casa/stdlib.h>
+ 
++
+ #ifndef MAX_LOGICAL_RECORD_SIZE
+ #define MAX_LOGICAL_RECORD_SIZE 850000u
+ #endif
+--- casa-code-4.2.orig/synthesis/CMakeLists.txt
++++ casa-code-4.2/synthesis/CMakeLists.txt
+@@ -719,7 +719,8 @@ install (FILES
+ 	Utilities/AppRC.h
+ 	Utilities/FixVis.h
+ 	Utilities/ThreadCoordinator.h
+-        Utilities/SpectralImageUtil.h
++    Utilities/SpectralImageUtil.h
++    Utilities/SigHandler.h
+ 	DESTINATION include/casacode/synthesis/Utilities
+ 	)
+ casa_add_executable( synthesis casasplit apps/casasplit/casasplit.cc )

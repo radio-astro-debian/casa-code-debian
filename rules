@@ -8,6 +8,7 @@ override_dh_auto_configure:
 	# disable pgplot for now, since it is not included in the deb package
 	dh_auto_configure -- -DSKIP_PGPLOT=OFF
 	sed -ri 's/pthread//g' obj-${DEB_BUILD_GNU_TYPE}/CMakeFiles/config_check.dir/build.make
+	sed -ri 's/\/usr\/lib\/.*\/lib.so//g' obj-${DEB_BUILD_GNU_TYPE}/CMakeFiles/config_check.dir/build.make 
 
 override_dh_shlibdeps:
 	dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info

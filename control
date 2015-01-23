@@ -1,4 +1,4 @@
-Source: casa
+Source: casa-code
 Section: science
 Priority: extra
 Maintainer: Gijs Molenaar <gijs@pythonic.nl>
@@ -8,13 +8,13 @@ Build-Depends: debhelper (>= 8.0.0), cmake, libboost-program-options-dev,
  libfftw3-dev, libblas-dev, liblapack-dev, libx11-dev, libqt4-dev,
  openjdk-6-jre-headless, libdbus-1-dev, libdbus-c++-dev, libxerces-c2-dev,
  libreadline-dev, libxml2-dev, libxslt1-dev, aatm (>= 0.5), libsqlite3-dev,
- rpfits, libncurses5-dev, subversion, libcasacasacore-dev, libqwt5-qt4-dev
+ rpfits, libncurses5-dev, subversion, libcasa-casacore-dev, libqwt5-qt4-dev
 Standards-Version: 3.9.2
 Homepage: http://casa.nrao.edu/
 
-Package: casa
+Package: casa-code
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libcasacasacore1
+Depends: ${shlibs:Depends}, ${misc:Depends}, libcasa-casacore1
 Description: supporting the data post-processing needs of the next generation of radio astronomical telescopes
  CASA, the Common Astronomy Software Applications package, is being developed
  with the primary goal of supporting the data post-processing needs of the next

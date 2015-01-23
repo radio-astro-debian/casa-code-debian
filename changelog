@@ -1,3 +1,9 @@
+casa-code (4.2-1trusty) trusty; urgency=medium
+
+  * trusty build
+
+ -- Gijs Molenaar <gijs@pythonic.nl>  Thu, 22 Jan 2015 15:54:13 +0100
+
 casa (4.2.0-6precise1) precise; urgency=low
 
   * added missing libcasacasacore1 dep
