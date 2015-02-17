@@ -1,0 +1,22 @@
+Description: we need this header
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- casa-code-4.2.orig/synthesis/CMakeLists.txt
++++ casa-code-4.2/synthesis/CMakeLists.txt
+@@ -719,7 +719,8 @@ install (FILES
+ 	Utilities/AppRC.h
+ 	Utilities/FixVis.h
+ 	Utilities/ThreadCoordinator.h
+-        Utilities/SpectralImageUtil.h
++    Utilities/SpectralImageUtil.h
++    Utilities/SigHandler.h
+ 	DESTINATION include/casacode/synthesis/Utilities
+ 	)
+ casa_add_executable( synthesis casasplit apps/casasplit/casasplit.cc )
