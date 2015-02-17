@@ -1,3 +1,9 @@
+casa-code (4.2-2trusty) trusty; urgency=medium
+
+  * forgot synthesis/Utilities/SigHandler.h
+
+ -- Gijs Molenaar <gijs@pythonic.nl>  Fri, 23 Jan 2015 12:40:41 +0100
+
 casa-code (4.2-1trusty) trusty; urgency=medium
 
   * trusty build

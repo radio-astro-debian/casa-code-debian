@@ -9,3 +9,4 @@ virtual_createFTmachine
 disable_broken_stuff
 missing_header
 missing_header2
+install_header
